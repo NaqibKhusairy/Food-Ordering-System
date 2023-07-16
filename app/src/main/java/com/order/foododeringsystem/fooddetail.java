@@ -57,6 +57,7 @@ public class fooddetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),Home.class);
+                intent.putExtra("name",name);
                 startActivity(intent);
             }
         });

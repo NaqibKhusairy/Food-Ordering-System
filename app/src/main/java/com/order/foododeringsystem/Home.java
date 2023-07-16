@@ -112,6 +112,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),order.class);
+                intent.putExtra("name",name);
                 startActivity(intent);
             }
         });
@@ -120,6 +121,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                intent.putExtra("name",name);
                 startActivity(intent);
             }
         });
