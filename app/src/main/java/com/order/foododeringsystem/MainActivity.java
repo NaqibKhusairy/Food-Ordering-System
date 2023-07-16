@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     //letak codding database
                     //intent
                     Intent intent = new Intent(getApplicationContext(),Home.class);
+                    intent.putExtra("name",name);
                     startActivity(intent);
                 }
             }

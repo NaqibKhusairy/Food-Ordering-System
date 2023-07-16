@@ -41,9 +41,9 @@
         android:id="@+id/karipap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/donut"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.341">
@@ -74,10 +74,10 @@
         android:id="@+id/donut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/karipap"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.341">
 
@@ -107,9 +107,9 @@
         android:id="@+id/popia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/samosa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/karipap"
         app:layout_constraintVertical_bias="0.1">
@@ -140,10 +140,10 @@
         android:id="@+id/samosa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/popia"
         app:layout_constraintTop_toBottomOf="@id/karipap"
         app:layout_constraintVertical_bias="0.1">
 
@@ -173,9 +173,9 @@
         android:id="@+id/cucurbadak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/kuihkasturi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/popia"
         app:layout_constraintVertical_bias="0.1">
@@ -206,10 +206,10 @@
         android:id="@+id/kuihkasturi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cucurbadak"
         app:layout_constraintTop_toBottomOf="@id/popia"
         app:layout_constraintVertical_bias="0.1">
 
@@ -241,8 +241,7 @@
         android:layout_height="67dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/order"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.969"
         app:srcCompat="@drawable/loggg" />
@@ -252,9 +251,8 @@
         android:layout_width="76dp"
         android:layout_height="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logout"
+        app:layout_constraintStart_toEndOf="@+id/homepage"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.969"
         app:srcCompat="@drawable/foodod" />
@@ -264,10 +262,10 @@
         android:layout_width="77dp"
         android:layout_height="76dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintEnd_toStartOf="@+id/order"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.975"
-        app:srcCompat="@drawable/homemem" />
+        app:srcCompat="@drawable/homemem"
+        app:tint="#801188" />
 </androidx.constraintlayout.widget.ConstraintLayout>
