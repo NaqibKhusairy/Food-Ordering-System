@@ -77,6 +77,9 @@ public class register extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter Your Address", Toast.LENGTH_SHORT).show();
                 }
                 else{
+                    //codding database
+
+                    //intent
                     Intent intent = new Intent(getApplicationContext(),Home.class);
                     startActivity(intent);
                 }
