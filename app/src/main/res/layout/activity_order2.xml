@@ -20,10 +20,10 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <Button
-        android:id="@+id/addcart"
+        android:id="@+id/addTocartbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADD TO CART"
+        android:text="CONTINUE"
         app:layout_constraintBottom_toTopOf="@+id/imageView10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/addcart"
+        app:layout_constraintTop_toBottomOf="@+id/addTocartbtn"
         app:srcCompat="@drawable/carttt" />
 
     <ImageView
@@ -48,7 +48,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addcart"
+        app:layout_constraintTop_toBottomOf="@+id/addTocartbtn"
         app:srcCompat="@drawable/bacckk" />
 
     <ScrollView
@@ -94,7 +94,7 @@
                     android:id="@+id/karipapdagingprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -116,7 +116,7 @@
                     android:id="@+id/karipapayamprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.50 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -138,7 +138,7 @@
                     android:id="@+id/karipapkeledekprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -160,7 +160,7 @@
                     android:id="@+id/karipap5price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -182,7 +182,7 @@
                     android:id="@+id/karipap6price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -218,7 +218,7 @@
                     android:id="@+id/donutbiasaprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -240,7 +240,7 @@
                     android:id="@+id/donutredvelvetprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -277,7 +277,7 @@
                     android:id="@+id/popiakentangprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -299,7 +299,7 @@
                     android:id="@+id/popiaayamprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.50 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -321,7 +321,7 @@
                     android:id="@+id/popiadagingprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -357,7 +357,7 @@
                     android:id="@+id/samosakentangprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -379,7 +379,7 @@
                     android:id="@+id/samosaayamprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 2.50 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -401,7 +401,7 @@
                     android:id="@+id/samosadagingprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -437,7 +437,7 @@
                     android:id="@+id/cucurbadakprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -473,7 +473,7 @@
                     android:id="@+id/kuihkasturiprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price: RM ? .00 Per Packet"
+                    android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
             </LinearLayout>

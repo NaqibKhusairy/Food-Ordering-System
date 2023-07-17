@@ -37,22 +37,25 @@ public class register extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name=Name.getText().toString();
-                ic=Ic.getText().toString();
-                age=Age.getText().toString();
-                GENder=Gender.getCheckedRadioButtonId();
-                GENDER=findViewById(GENder);
-                gender=GENDER.getText().toString();
-                email=Email.getText().toString();
-                phone=Phone.getText().toString();
-                password=Password.getText().toString();
-                address=Address.getText().toString();
+                name = Name.getText().toString();
+                ic = Ic.getText().toString();
+                age = Age.getText().toString();
+                GENder = Gender.getCheckedRadioButtonId();
 
-                if(name.equals("")&&ic.equals("")&&age.equals("")&&GENder<=0&&
-                        email.equals("")&&phone.equals("")&&password.equals("")&&address.equals("")){
-                    Toast.makeText(getApplicationContext(), "Please enter all the required field", Toast.LENGTH_SHORT).show();
+                // Check if any radio button is selected
+                if (GENder == -1) {
+                    Toast.makeText(getApplicationContext(), "Please select your gender", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-                else if(name.equals("")){
+
+                GENDER = findViewById(GENder);
+                gender = GENDER.getText().toString();
+                email = Email.getText().toString();
+                phone = Phone.getText().toString();
+                password = Password.getText().toString();
+                address = Address.getText().toString();
+
+                if(name.equals("")){
                     Toast.makeText(getApplicationContext(), "Please enter Your Name", Toast.LENGTH_SHORT).show();
                 }
                 else if(ic.equals("")){
@@ -60,9 +63,6 @@ public class register extends AppCompatActivity {
                 }
                 else if(age.equals("")){
                     Toast.makeText(getApplicationContext(), "Please enter Your Age", Toast.LENGTH_SHORT).show();
-                }
-                else if(GENder<=0){
-                    Toast.makeText(getApplicationContext(), "Please enter Your Gender", Toast.LENGTH_SHORT).show();
                 }
                 else if(email.equals("")){
                     Toast.makeText(getApplicationContext(), "Please enter Your Email", Toast.LENGTH_SHORT).show();
@@ -81,6 +81,7 @@ public class register extends AppCompatActivity {
 
                     //intent
                     Intent intent = new Intent(getApplicationContext(),Home.class);
+                    intent.putExtra("name",name);
                     startActivity(intent);
                 }
             }
@@ -90,7 +91,6 @@ public class register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                intent.putExtra("name",name);
                 startActivity(intent);
             }
         });
