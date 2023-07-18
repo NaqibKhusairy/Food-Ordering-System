@@ -12,6 +12,9 @@
         android:theme="@style/Theme.FoodOrderingSystem"
         tools:targetApi="31">
         <activity
+            android:name=".resit"
+            android:exported="false" />
+        <activity
             android:name=".cart"
             android:exported="false" />
         <activity
