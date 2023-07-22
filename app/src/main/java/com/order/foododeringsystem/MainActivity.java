@@ -79,7 +79,10 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString(Constants.KEY_EMAIL, responseBody.getUserDetailObject().getUserDetails().get(0).getEmail());
                         editor.apply();
                         Toast.makeText(MainActivity.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), Home.class));
+
+                        Intent intent = new Intent(MainActivity.this, Home.class);
+                        intent.putExtra("name",name);
+                        startActivity(intent);
                         finish();
                     } else {
                         Toast.makeText(MainActivity.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();

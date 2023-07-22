@@ -127,8 +127,10 @@ public class register extends AppCompatActivity {
                 RegistrationResponseModel responseBody = response.body();
                 if (responseBody != null) {
                     if (responseBody.getSuccess().equals("1")) {
-                        Toast.makeText(register.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(register.this, MainActivity.class);
+                        String name = Name.getText().toString();
+                        Toast.makeText(register.this, "Hello " + name+" Your Are Registerated", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(register.this, Home.class);
+                        intent.putExtra("name",name);
                         startActivity(intent);
                         finish();
                     } else if (responseBody.getSuccess().equals("0")) {
