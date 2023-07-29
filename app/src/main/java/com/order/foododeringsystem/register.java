@@ -1,5 +1,8 @@
 package com.order.foododeringsystem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,14 +13,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import java.util.HashMap;
 
 public class register extends AppCompatActivity {
     EditText Name,Ic,Age,Email,Phone,Password,Address;
@@ -127,10 +131,8 @@ public class register extends AppCompatActivity {
                 RegistrationResponseModel responseBody = response.body();
                 if (responseBody != null) {
                     if (responseBody.getSuccess().equals("1")) {
-                        String name = Name.getText().toString();
-                        Toast.makeText(register.this, "Hello " + name+" Your Are Registerated", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(register.this, Home.class);
-                        intent.putExtra("name",name);
+                        Toast.makeText(register.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(register.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     } else if (responseBody.getSuccess().equals("0")) {
@@ -141,6 +143,7 @@ public class register extends AppCompatActivity {
                 }
                 progressDialog.dismiss();
             }
+
 
             @Override
             public void onFailure(@NonNull Call<RegistrationResponseModel> call, @NonNull Throwable t) {

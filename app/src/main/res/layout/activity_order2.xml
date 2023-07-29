@@ -36,8 +36,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="89dp"
-        android:layout_height="73dp"
+        android:layout_width="77dp"
+        android:layout_height="51dp"
         android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +47,8 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="81dp"
-        android:layout_height="75dp"
+        android:layout_width="77dp"
+        android:layout_height="54dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -94,13 +94,14 @@
                     android:id="@+id/karipapdaging"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
+                    android:fontFamily="sans-serif-black"
                     android:text="DAGING" />
 
                 <TextView
                     android:id="@+id/karipapdagingprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -117,13 +118,14 @@
                     android:id="@+id/karipapayam"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
+                    android:fontFamily="sans-serif-black"
                     android:text="AYAM" />
 
                 <TextView
                     android:id="@+id/karipapayamprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.50 Per Packet"
                     android:textSize="18sp" />
 
@@ -140,13 +142,14 @@
                     android:id="@+id/karipapkeledek"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
+                    android:fontFamily="sans-serif-black"
                     android:text="KELEDEK" />
 
                 <TextView
                     android:id="@+id/karipapkeledekprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -163,13 +166,14 @@
                     android:id="@+id/karipap5"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
+                    android:fontFamily="sans-serif-black"
                     android:text="SARDIN" />
 
                 <TextView
                     android:id="@+id/karipap5price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -201,13 +205,14 @@
                     android:id="@+id/donutbiasa"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
+                    android:fontFamily="sans-serif-black"
                     android:text="BIASA" />
 
                 <TextView
                     android:id="@+id/donutbiasaprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -224,13 +229,14 @@
                     android:id="@+id/donutredvelvet"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
+                    android:fontFamily="sans-serif-black"
                     android:text="RED VELVET" />
 
                 <TextView
                     android:id="@+id/donutredvelvetprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -270,6 +276,7 @@
                     android:id="@+id/popiakentangprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -293,6 +300,7 @@
                     android:id="@+id/popiaayamprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.50 Per Packet"
                     android:textSize="18sp" />
 
@@ -316,6 +324,7 @@
                     android:id="@+id/popiadagingprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -354,6 +363,7 @@
                     android:id="@+id/samosakentangprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -377,6 +387,7 @@
                     android:id="@+id/samosaayamprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 2.50 Per Packet"
                     android:textSize="18sp" />
 
@@ -400,6 +411,7 @@
                     android:id="@+id/samosadagingprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -438,6 +450,7 @@
                     android:id="@+id/cucurbadakprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 
@@ -476,6 +489,7 @@
                     android:id="@+id/kuihkasturiprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="casual"
                     android:text="Price: RM 3.00 Per Packet"
                     android:textSize="18sp" />
 

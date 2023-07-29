@@ -1,16 +1,24 @@
 package com.order.foododeringsystem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import java.util.jar.Attributes;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         Password=findViewById(R.id.etPass);
         login=findViewById(R.id.btnlogin);
         register=findViewById(R.id.btnReg);
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,10 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString(Constants.KEY_EMAIL, responseBody.getUserDetailObject().getUserDetails().get(0).getEmail());
                         editor.apply();
                         Toast.makeText(MainActivity.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-
-                        Intent intent = new Intent(MainActivity.this, Home.class);
-                        intent.putExtra("name",name);
-                        startActivity(intent);
+                        startActivity(new Intent(getApplicationContext(), Home.class));
                         finish();
                     } else {
                         Toast.makeText(MainActivity.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
@@ -90,11 +97,13 @@ public class MainActivity extends AppCompatActivity {
                 }
                 progressDialog.dismiss();
             }
-
             @Override
             public void onFailure(@NonNull Call<LoginResponseModel> call, @NonNull Throwable t) {
                 progressDialog.dismiss();
             }
+
+
+
         });
     }
 }

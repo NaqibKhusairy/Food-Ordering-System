@@ -1,14 +1,14 @@
 package com.order.foododeringsystem;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class resit extends AppCompatActivity {
+import android.os.Bundle;
+
+public class my_profile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resit);
+        setContentView(R.layout.my_profile);
     }
 }

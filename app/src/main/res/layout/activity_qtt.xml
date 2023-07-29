@@ -11,6 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="casual"
         android:text="PLEASE CHOOSE YOUR QUANTITY"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -35,10 +36,11 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="81dp"
-        android:layout_height="75dp"
+        android:layout_width="85dp"
+        android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addTocartbtn"
         app:srcCompat="@drawable/bacckk" />
@@ -51,9 +53,10 @@
         android:layout_marginBottom="14dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView10"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.104">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,6 +75,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="KARIPAP DAGING"
                     android:textSize="18sp" />
 
@@ -95,6 +99,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="KARIPAP AYAM"
                     android:textSize="18sp" />
 
@@ -119,6 +124,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="KARIPAP KELEDEK"
                     android:textSize="18sp" />
 
@@ -142,6 +148,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="KARIPAP SARDIN"
                     android:textSize="18sp" />
 
@@ -165,6 +172,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="DONUT BIASA"
                     android:textSize="18sp" />
 
@@ -189,6 +197,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="DONUT RED VELVET"
                     android:textSize="18sp" />
 
@@ -212,6 +221,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="POPIA KENTANG"
                     android:textSize="18sp" />
 
@@ -235,6 +245,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="POPIA AYAM"
                     android:textSize="18sp" />
 
@@ -258,6 +269,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="POPIA DAGING"
                     android:textSize="18sp" />
 
@@ -282,6 +294,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="SAMOSA KENTANG"
                     android:textSize="18sp" />
 
@@ -305,6 +318,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="SAMOSA AYAM"
                     android:textSize="18sp" />
 
@@ -328,6 +342,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="SAMOSA DAGING"
                     android:textSize="18sp" />
 
@@ -351,6 +366,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="CUCUR BADAK"
                     android:textSize="18sp" />
 
@@ -375,6 +391,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="KUIH KASTURI"
                     android:textSize="18sp" />
 
@@ -401,5 +418,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.884" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

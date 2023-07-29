@@ -1,15 +1,17 @@
 package com.order.foododeringsystem;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class qtt extends AppCompatActivity {
     String name,option,KD,KA,KK,K1,K2,DB,DR,PK,PA,PD,SK,SA,SD,CB,KKSTURI,
@@ -205,27 +207,76 @@ public class qtt extends AppCompatActivity {
                     bkksturi=0;
                 }
                 else{
-                    bkd=Integer.parseInt(numkd.getSelectedItem().toString());
-                    bka=Integer.parseInt(numka.getSelectedItem().toString());
-                    bkk=Integer.parseInt(numkk.getSelectedItem().toString());
-                    bk1=Integer.parseInt(numk1.getSelectedItem().toString());
-                    bk2=Integer.parseInt(numk1.getSelectedItem().toString());
-                    bdb=Integer.parseInt(numdb.getSelectedItem().toString());
-                    bdr=Integer.parseInt(numdr.getSelectedItem().toString());
-                    bpk=Integer.parseInt(numpk.getSelectedItem().toString());
-                    bpa=Integer.parseInt(numpa.getSelectedItem().toString());
-                    bsk=Integer.parseInt(numsk.getSelectedItem().toString());
-                    bsa=Integer.parseInt(numsa.getSelectedItem().toString());
-                    bsd=Integer.parseInt(numsd.getSelectedItem().toString());
-                    bcb=Integer.parseInt(numcb.getSelectedItem().toString());
-                    bkksturi=Integer.parseInt(numkksturi.getSelectedItem().toString());
+
+
                 }
                 //code database
+                bkd=Integer.parseInt(numkd.getSelectedItem().toString());
+                bka=Integer.parseInt(numka.getSelectedItem().toString());
+                bkk=Integer.parseInt(numkk.getSelectedItem().toString());
+                bk1=Integer.parseInt(numk1.getSelectedItem().toString());
+//                bk2=Integer.parseInt(numk2.getSelectedItem().toString());
+                bdb=Integer.parseInt(numdb.getSelectedItem().toString());
+                bdr=Integer.parseInt(numdr.getSelectedItem().toString());
+                bpk=Integer.parseInt(numpk.getSelectedItem().toString());
+                bpa=Integer.parseInt(numpa.getSelectedItem().toString());
+                bsk=Integer.parseInt(numsk.getSelectedItem().toString());
+                bsa=Integer.parseInt(numsa.getSelectedItem().toString());
+                bsd=Integer.parseInt(numsd.getSelectedItem().toString());
+                bcb=Integer.parseInt(numcb.getSelectedItem().toString());
+                bkksturi=Integer.parseInt(numkksturi.getSelectedItem().toString());
+                bpd = Integer.parseInt(numpd.getSelectedItem().toString());
 
                 //intent
                 Intent intent = new Intent(getApplicationContext(),cart.class);
                 intent.putExtra("name",name);
                 intent.putExtra("type",option);
+                intent.putExtra("kd",KD);
+                intent.putExtra("ka",KA);
+                intent.putExtra("kk",KK);
+                intent.putExtra("k1",K1);
+                intent.putExtra("db",DB);
+                intent.putExtra("dr",DR);
+                intent.putExtra("pk",PK);
+                intent.putExtra("pa",PA);
+                intent.putExtra("pd",PD);
+                intent.putExtra("sk",SK);
+                intent.putExtra("sa",SA);
+                intent.putExtra("sd",SD);
+                intent.putExtra("cb",CB);
+                intent.putExtra("kksturi",KKSTURI);
+                intent.putExtra("hkd",Kd);
+                intent.putExtra("hka",Ka);
+                intent.putExtra("hkk",Kk);
+                intent.putExtra("hk1",k11);
+                intent.putExtra("hk2",k21);
+                intent.putExtra("hdb",Db);
+                intent.putExtra("hdr",Dr);
+                intent.putExtra("hpk",Pk);
+                intent.putExtra("hpa",Pa);
+                intent.putExtra("hpd",Pd);
+                intent.putExtra("hsk",Sk);
+                intent.putExtra("hsa",Sa);
+                intent.putExtra("hsd",Sd);
+                intent.putExtra("hcb",Cb);
+                intent.putExtra("hkksturi",Kksturi);
+
+                intent.putExtra("bkd",String.valueOf(bkd));
+                intent.putExtra("bka",String.valueOf(bka));
+                intent.putExtra("bkk",String.valueOf(bkk));
+                intent.putExtra("bk1",String.valueOf(bk1));
+                intent.putExtra("bk2",String.valueOf(bk2));
+                intent.putExtra("bdb",String.valueOf(bdb));
+                intent.putExtra("bdr",String.valueOf(bdr));
+                intent.putExtra("bpk",String.valueOf(bpk));
+                intent.putExtra("bpa",String.valueOf(bpa));
+                intent.putExtra("bsk",String.valueOf(bsk));
+                intent.putExtra("bsa",String.valueOf(bsa));
+                intent.putExtra("bsd",String.valueOf(bsd));
+                intent.putExtra("bcb",String.valueOf(bcb));
+                intent.putExtra("bkksturi",String.valueOf(bkksturi));
+                intent.putExtra("bpd",String.valueOf(bpd));
+
                 startActivity(intent);
             }
         });
