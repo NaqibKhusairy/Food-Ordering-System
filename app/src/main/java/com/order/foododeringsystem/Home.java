@@ -152,11 +152,6 @@ public class Home extends AppCompatActivity {
                     Intent adminLoginIntent = new Intent(Home.this,my_profile.class);
                     startActivity(adminLoginIntent);
                     return true;
-                case R.id.item2:
-                    // Navigate to User Log In Activity
-                    Intent userLoginIntent = new Intent(Home.this,Admin_page.class);
-                    startActivity(userLoginIntent);
-                    return true;
                 default:
                     return super.onOptionsItemSelected(item);
             }

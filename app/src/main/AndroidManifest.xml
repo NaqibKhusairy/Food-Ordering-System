@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,6 +12,49 @@
         android:label="OmaiTaste Frozen Food"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodOrderingSystem"
-        tools:targetApi="31"></application>
+        tools:targetApi="31">
+        <activity
+            android:name=".Admin_page2"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_page"
+            android:exported="false" />
+        <activity
+            android:name=".my_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Receipt_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".cart"
+            android:exported="false" />
+        <activity
+            android:name=".qtt"
+            android:exported="false" />
+        <activity
+            android:name=".order2"
+            android:exported="false" />
+        <activity
+            android:name=".order"
+            android:exported="false" />
+        <activity
+            android:name=".fooddetail"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
