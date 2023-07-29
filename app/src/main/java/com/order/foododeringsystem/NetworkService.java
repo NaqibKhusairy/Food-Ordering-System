@@ -17,5 +17,9 @@ public interface NetworkService {
     @POST("login.php")
     Call<LoginResponseModel> login(@Field("email") String email, @Field("password") String password);
 
+    @FormUrlEncoded
+    @POST("cart.php")
+    Call<CartResponseModel> cart(@FieldMap HashMap<String, String> cartparams);
+
 
 }

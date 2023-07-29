@@ -1,7 +1,9 @@
 package com.order.foododeringsystem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,12 @@ import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.HashMap;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class cart extends AppCompatActivity {
     String name,option,Detail,OPTion;
@@ -46,7 +54,7 @@ public class cart extends AppCompatActivity {
         paymentmehtod=findViewById(R.id.LinearLayout4);
         table=findViewById(R.id.table);
         Option=findViewById(R.id.Option);
-       // rgpm=findViewById(R.id.rgpm);
+        // rgpm=findViewById(R.id.rgpm);
         pickup=findViewById(R.id.pickup);
         delivery=findViewById(R.id.delivery);
 
@@ -158,20 +166,6 @@ public class cart extends AppCompatActivity {
         numcb.setText(bcb);
         numkksturi.setText(bkksturi);
 
-
-
-        if(!KD.equals("")||!KA.equals("")||!KK.equals("")||!K1.equals("")||
-                !DB.equals("")||!DR.equals("")||!PK.equals("")||!PA.equals("")||!PD.equals("")||
-                !SK.equals("")||!SA.equals("")||!SD.equals("")||!CB.equals("")||!KKSTURI.equals("")){
-           // pb.setVisibility(View.GONE);
-           // addtocard.setVisibility(View.VISIBLE);
-            //pc.setVisibility(View.VISIBLE);
-        }
-        else{
-           // pb.setVisibility(View.VISIBLE);
-            //addtocard.setVisibility(View.GONE);
-            //pc.setVisibility(View.GONE);
-        }
         if(KD.equals("")){
             kd.setVisibility(View.GONE);
         }
@@ -281,7 +275,62 @@ public class cart extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please select your Payment Method", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                HashMap<String, String> cartparams = new HashMap<>();
+                cartparams.put("name", name);
+                cartparams.put("bkd",bkd);
+                cartparams.put("bka",bka);
+                cartparams.put("bkk",bkk);
+                cartparams.put("bk1", bk1);
+                cartparams.put("bk2",bk2);
+                cartparams.put("bdb", bdb);
+                cartparams.put("bdr",bdr);
+                cartparams.put("bpk",bpk);
+                cartparams.put("bpa",bpa);
+                cartparams.put("bsk", bsk);
+                cartparams.put("bsa",bsa);
+                cartparams.put("bsd", bsd);
+                cartparams.put("bcb",bcb);
+                cartparams.put("bkksturi", bkksturi);
+                cartparams.put("bpd",bpd);
+                cartparams.put("option",option);
+                cart(cartparams);
             }
         });
     }
-}
+
+        private void cart(HashMap<String, String> cartparams) {
+            final ProgressDialog progressDialog = new ProgressDialog(cart.this);
+            progressDialog.setTitle("Please wait");
+            progressDialog.setMessage("Registering...");
+            progressDialog.setCancelable(false);
+            progressDialog.show();
+
+            NetworkService networkService = NetworkClient.getClient().create(NetworkService.class);
+            Call<CartResponseModel> CartCall = networkService.cart(cartparams);
+            CartCall.enqueue(new Callback<CartResponseModel>() {
+                @Override
+                public void onResponse(@NonNull Call<CartResponseModel> call, @NonNull Response<CartResponseModel> response) {
+                    CartResponseModel responseBody = response.body();
+                    if (responseBody != null) {
+                        if (responseBody.getSuccess().equals("1")) {
+                            Toast.makeText(cart.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(cart.this, Receipt_Activity.class);
+                            startActivity(intent);
+                            finish();
+                        } else if (responseBody.getSuccess().equals("0")) {
+                            Toast.makeText(getApplicationContext(), responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+                        } else if (responseBody.getSuccess().equals("2")) {
+                            Toast.makeText(getApplicationContext(), responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    progressDialog.dismiss();
+                }
+
+
+                @Override
+                public void onFailure(@NonNull Call<CartResponseModel> call, @NonNull Throwable t) {
+                    progressDialog.dismiss();
+                }
+            });
+        }
+    }

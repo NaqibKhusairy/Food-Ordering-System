@@ -26,7 +26,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     EditText Name,Password;
-    Button login,register;
+    Button login,register,admin;
     String name,password;
 
     @Override
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Password=findViewById(R.id.etPass);
         login=findViewById(R.id.btnlogin);
         register=findViewById(R.id.btnReg);
+        admin=findViewById(R.id.btnReg3);
 
 
 
@@ -61,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),register.class);
+                startActivity(intent);
+            }
+        });
+
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Admin_page.class);
                 startActivity(intent);
             }
         });
