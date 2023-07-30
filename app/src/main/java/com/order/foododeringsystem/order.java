@@ -34,7 +34,7 @@ public class order extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),order2.class);
                 option=Pickup.getText().toString();
                 intent.putExtra("name",name);
-                intent.putExtra("type",option);
+                intent.putExtra("type","PICK UP");
                 startActivity(intent);
             }
         });
@@ -45,7 +45,7 @@ public class order extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),order2.class);
                 option=Delivery.getText().toString();
                 intent.putExtra("name",name);
-                intent.putExtra("type",option);
+                intent.putExtra("type","DELIVERY");
                 startActivity(intent);
             }
         });

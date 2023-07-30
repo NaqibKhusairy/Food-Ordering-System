@@ -166,6 +166,9 @@ public class cart extends AppCompatActivity {
         numcb.setText(bcb);
         numkksturi.setText(bkksturi);
 
+
+        detail.setText("");
+
         if(KD.equals("")){
             kd.setVisibility(View.GONE);
         }
@@ -224,18 +227,7 @@ public class cart extends AppCompatActivity {
 
         Detail=detail.getText().toString();
 
-        //detail.setText(coding database);
 
-        if(Detail.equals("Your Cart Is Empty")){
-            table.setVisibility(View.GONE);
-            paymentmehtod.setVisibility(View.GONE);
-            payment.setVisibility(View.GONE);
-        }
-        else{
-            table.setVisibility(View.VISIBLE);
-            paymentmehtod.setVisibility(View.VISIBLE);
-            payment.setVisibility(View.VISIBLE);
-        }
 
         // Inside onCreate method
 

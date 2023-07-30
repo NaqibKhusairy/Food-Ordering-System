@@ -35,17 +35,6 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="77dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/addTocartbtn"
-        app:srcCompat="@drawable/carttt" />
-
-    <ImageView
         android:id="@+id/imageView10"
         android:layout_width="77dp"
         android:layout_height="54dp"

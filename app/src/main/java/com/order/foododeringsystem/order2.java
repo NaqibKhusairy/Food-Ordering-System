@@ -12,7 +12,7 @@ import android.widget.ImageView;
 public class order2 extends AppCompatActivity {
     String name,option;
     Button addtocart;
-    ImageView back,cart;
+    ImageView back;
     CheckBox kd,ka,kk,k1,k2,db,dr,pk,pa,pd,sk,sa,sd,cb,kksturi;
     String KD,KA,KK,K1,K2,DB,DR,PK,PA,PD,SK,SA,SD,CB,KKSTURI,
             Kd,Ka,Kk,k11,k21,Db,Dr,Pk,Pa,Pd,Sk,Sa,Sd,Cb,Kksturi;
@@ -23,7 +23,6 @@ public class order2 extends AppCompatActivity {
         setContentView(R.layout.activity_order2);
         addtocart=findViewById(R.id.addTocartbtn);
         back=findViewById(R.id.imageView10);
-        cart=findViewById(R.id.imageView);
         kd=findViewById(R.id.karipapdaging);
         ka=findViewById(R.id.karipapayam);
         kk=findViewById(R.id.karipapkeledek);
@@ -47,16 +46,6 @@ public class order2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),order.class);
                 intent.putExtra("name",name);
-                startActivity(intent);
-            }
-        });
-
-        cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),cart.class);
-                intent.putExtra("name",name);
-                intent.putExtra("type",option);
                 startActivity(intent);
             }
         });
