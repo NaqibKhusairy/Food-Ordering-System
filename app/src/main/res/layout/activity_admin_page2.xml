@@ -26,23 +26,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Update Order Status"
+            android:text="Update User Details"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spinnerOrderStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
-
         <Button
-            android:id="@+id/btnUpdateOrderStatus"
+            android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
-            android:text="Update Status" />
+            android:text="Update User Details" />
 
         <!-- Section: Delete Users -->
         <TextView
@@ -53,14 +47,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <ListView
-            android:id="@+id/listUsers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="1dp" />
-
         <!-- An interactive delete button for each user -->
         <Button
             android:id="@+id/btnDeleteUser"
@@ -70,15 +56,6 @@
             android:layout_marginTop="8dp"
             android:text="Delete User" />
 
-        <!-- Section: View Monthly Sales -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="View Monthly Sales"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
         <!-- Add views for displaying monthly sales information here -->
         <!-- For example, line chart, bar chart, or other visualizations -->
 
@@ -87,17 +64,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="View Detail Order"
+            android:text="View Order Detail"
             android:textSize="20sp"
             android:textStyle="bold" />
-
-        <ListView
-            android:id="@+id/listOrders"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="1dp" />
 
         <!-- An interactive button to view details of each order -->
         <Button

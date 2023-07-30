@@ -49,8 +49,10 @@ public class Admin_page extends AppCompatActivity {
                     if(name.equals(ADMIN_USERNAME)&&password.equals(ADMIN_PASSWORD)) {
                         // Start the order activity and pass the name as an extra
                         Intent intent = new Intent(Admin_page.this, Admin_page2.class);
-                        intent.putExtra("name", name);
                         startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(Admin_page.this, "Please enter the correct name and password", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     // Show a message if either name or password is empty
