@@ -150,6 +150,7 @@ public class Home extends AppCompatActivity {
                 case R.id.item1:
                     // Navigate to Admin Log In Activity
                     Intent adminLoginIntent = new Intent(Home.this,my_profile.class);
+                    adminLoginIntent.putExtra("name", name);
                     startActivity(adminLoginIntent);
                     return true;
                 default:

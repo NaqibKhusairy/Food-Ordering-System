@@ -29,26 +29,6 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="93dp"
-        android:text="Forgot password?Click here" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="24dp"
-        android:background="#713434"
-        android:backgroundTint="#8E85FA"
-        android:text="Change Password" />
-
-    <TextView
         android:id="@+id/txt_ic_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +42,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
         android:text="TextView" />
 
     <TextView
