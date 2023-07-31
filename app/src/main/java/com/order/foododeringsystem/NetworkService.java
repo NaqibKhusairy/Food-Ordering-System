@@ -20,6 +20,4 @@ public interface NetworkService {
     @FormUrlEncoded
     @POST("cart.php")
     Call<CartResponseModel> cart(@FieldMap HashMap<String, String> params);
-
-
 }

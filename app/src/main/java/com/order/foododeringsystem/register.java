@@ -132,7 +132,8 @@ public class register extends AppCompatActivity {
                 if (responseBody != null) {
                     if (responseBody.getSuccess().equals("1")) {
                         Toast.makeText(register.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(register.this, MainActivity.class);
+                        Intent intent = new Intent(register.this, Home.class);
+                        intent.putExtra("name",name);
                         startActivity(intent);
                         finish();
                     } else if (responseBody.getSuccess().equals("0")) {

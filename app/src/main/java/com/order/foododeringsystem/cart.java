@@ -237,17 +237,16 @@ public class cart extends AppCompatActivity {
                 params.put("bka", bka);
                 params.put("bkk", bkk);
                 params.put("bk1", bk1);
-                params.put("bk2", bk2);
                 params.put("bdb", bdb);
                 params.put("bdr", bdr);
                 params.put("bpk", bpk);
                 params.put("bpa", bpa);
+                params.put("bpd", bpd);
                 params.put("bsk", bsk);
                 params.put("bsa", bsa);
                 params.put("bsd", bsd);
                 params.put("bcb", bcb);
                 params.put("bkksturi", bkksturi);
-                params.put("bpd", bpd);
                 params.put("option", option);
                 cart(params);
             }
@@ -266,23 +265,32 @@ public class cart extends AppCompatActivity {
         cartCall.enqueue(new Callback<CartResponseModel>() {
             @Override
             public void onResponse(@NonNull Call<CartResponseModel> call, @NonNull Response<CartResponseModel> response) {
-                CartResponseModel responseBody = response.body();
-                if (responseBody != null) {
-                    if (responseBody.getSuccess().equals("1")) {
-                        Toast.makeText(cart.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(cart.this, Receipt_Activity.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Toast.makeText(getApplicationContext(), responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
                 progressDialog.dismiss();
+
+                if (response.isSuccessful()) {
+                    CartResponseModel responseBody = response.body();
+                    if (responseBody != null) {
+                        if (responseBody.getSuccess().equals("1")) {
+                            Toast.makeText(cart.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(cart.this, Receipt_Activity.class);
+                            intent.putExtra("name",name);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(cart.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(cart.this, "Response body is empty", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(cart.this, "Error: " + response.code(), Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
             public void onFailure(@NonNull Call<CartResponseModel> call, @NonNull Throwable t) {
                 progressDialog.dismiss();
+                Toast.makeText(cart.this, "Network request failed: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
