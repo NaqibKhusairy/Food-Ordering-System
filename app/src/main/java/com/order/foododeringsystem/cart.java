@@ -40,6 +40,7 @@ public class cart extends AppCompatActivity {
 
     ImageView back;
     String bkd, bka, bkk, bk1, bk2, bdb, bdr, bpk, bpa, bpd, bsk, bsa, bsd, bcb, bkksturi;
+    Double BKD, BKA, BKK, BK1, BK2, BDB, BDR, BPK, BPA, BPD, BSK, BSA, BSD, BCB, BKKSTURI,harga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +142,24 @@ public class cart extends AppCompatActivity {
         bkksturi = getIntent().getStringExtra("bkksturi");
         bpd = getIntent().getStringExtra("bpd");
 
+        BKD=Double.parseDouble(bkd);
+        BKA=Double.parseDouble(bka);
+        BKK=Double.parseDouble(bkk);
+        BK1=Double.parseDouble(bk1);
+        BDB=Double.parseDouble(bdb);
+        BDR=Double.parseDouble(bdr);
+        BPK=Double.parseDouble(bpk);
+        BPA=Double.parseDouble(bpa);
+        BPD=Double.parseDouble(bpd);
+        BSK=Double.parseDouble(bsk);
+        BSA=Double.parseDouble(bsa);
+        BSD=Double.parseDouble(bsd);
+        BCB=Double.parseDouble(bcb);
+        BKKSTURI=Double.parseDouble(bkksturi);
+
+        harga=(BKD*3.00)+(BKA*2.50)+(BKK*2.00)+(BK1*2.00)+
+                (BDB*2.00)+(BDR*2.00)+(BPK*2.00)+(BPA*2.50)+(BPD*3.00)+
+                (BSK*2.00)+(BSA*2.50)+(BSD*3.00)+(BCB*3.00)+(BKKSTURI*3.00);
 
         numkd.setText(bkd);
         numka.setText(bka);
@@ -248,6 +267,7 @@ public class cart extends AppCompatActivity {
                 params.put("bcb", bcb);
                 params.put("bkksturi", bkksturi);
                 params.put("option", option);
+                params.put("harga", String.format("%.2f", harga));
                 cart(params);
             }
         });
@@ -274,6 +294,7 @@ public class cart extends AppCompatActivity {
                             Toast.makeText(cart.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(cart.this, Receipt_Activity.class);
                             intent.putExtra("name",name);
+                            intent.putExtra("harga",String.format("%.2f", harga));
                             startActivity(intent);
                             finish();
                         } else {
