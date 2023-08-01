@@ -73,6 +73,9 @@ public class register extends AppCompatActivity {
                 if(name.equals("")){
                     Toast.makeText(getApplicationContext(), "Please enter Your Name", Toast.LENGTH_SHORT).show();
                 }
+                else if(name.equals("admin")){
+                    Toast.makeText(getApplicationContext(), "Please enter Do not enter username as Admin", Toast.LENGTH_SHORT).show();
+                }
                 else if(ic.equals("")){
                     Toast.makeText(getApplicationContext(), "Please enter Your Ic", Toast.LENGTH_SHORT).show();
                 }
