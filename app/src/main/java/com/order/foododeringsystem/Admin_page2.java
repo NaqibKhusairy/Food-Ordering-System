@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -41,10 +42,13 @@ public class Admin_page2 extends AppCompatActivity {
         View.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
-                Intent intent = new Intent(Admin_page2.this, ViewOrder.class);
+                String url = "https://fypprojectpsp1.000webhostapp.com/index.php";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
                 startActivity(intent);
             }
         });
+
     }
 
     @Override
