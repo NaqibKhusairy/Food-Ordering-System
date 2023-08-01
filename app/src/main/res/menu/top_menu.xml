@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/item1"
-        android:title="My Profile"
+        android:title="Customer"
         android:orderInCategory="101"
         app:showAsAction="never" />
     <item

@@ -29,9 +29,6 @@
             android:name=".Admin_page"
             android:exported="false" />
         <activity
-            android:name=".my_profile"
-            android:exported="false" />
-        <activity
             android:name=".Receipt_Activity"
             android:exported="false" />
         <activity

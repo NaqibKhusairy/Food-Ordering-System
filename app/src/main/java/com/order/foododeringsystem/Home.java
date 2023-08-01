@@ -140,6 +140,8 @@ public class Home extends AppCompatActivity {
             // Inflate the menu; this adds items to the action bar if it is present.
             MenuInflater inflater = getMenuInflater();
             inflater.inflate(R.menu.top_menu, menu);
+            MenuItem item1 = menu.findItem(R.id.item1);
+            item1.setVisible(false);
             return true;
         }
         @Override
@@ -147,12 +149,6 @@ public class Home extends AppCompatActivity {
             // Handle menu item clicks here.
             int itemId = item.getItemId();
             switch (itemId) {
-                case R.id.item1:
-                    // Navigate to Admin Log In Activity
-                    Intent adminLoginIntent = new Intent(Home.this,my_profile.class);
-                    adminLoginIntent.putExtra("name", name);
-                    startActivity(adminLoginIntent);
-                    return true;
                 case R.id.item2:
                     Intent intent = new Intent(getApplicationContext(),Admin_page.class);
                     startActivity(intent);
