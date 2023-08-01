@@ -295,6 +295,21 @@ public class cart extends AppCompatActivity {
                             Intent intent = new Intent(cart.this, Receipt_Activity.class);
                             intent.putExtra("name",name);
                             intent.putExtra("harga",String.format("%.2f", harga));
+                            intent.putExtra("bkd", bkd);
+                            intent.putExtra("bka", bka);
+                            intent.putExtra("bkk", bkk);
+                            intent.putExtra("bk1", bk1);
+                            intent.putExtra("bdb", bdb);
+                            intent.putExtra("bdr", bdr);
+                            intent.putExtra("bpk", bpk);
+                            intent.putExtra("bpa", bpa);
+                            intent.putExtra("bpd", bpd);
+                            intent.putExtra("bsk", bsk);
+                            intent.putExtra("bsa", bsa);
+                            intent.putExtra("bsd", bsd);
+                            intent.putExtra("bcb", bcb);
+                            intent.putExtra("bkksturi", bkksturi);
+                            intent.putExtra("option", option);
                             startActivity(intent);
                             finish();
                         } else {
