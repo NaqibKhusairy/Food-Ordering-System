@@ -289,48 +289,6 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/LinearLayout7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LinearLayout6">
-
-        <TextView
-            android:id="@+id/password"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="sans-serif-black"
-            android:text="PASSWORD:"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/etPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="sans-serif"
-            android:hint="PASSWORD"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#726A6B"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </LinearLayout>
-
     <LinearLayout
         android:id="@+id/LinearLayout8"
         android:layout_width="match_parent"
@@ -342,7 +300,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LinearLayout7">
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout6">
 
         <TextView
             android:id="@+id/address"
@@ -373,19 +331,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="147dp"
-        android:layout_height="46dp"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#8E85FA"
-        android:text="SEARCH"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LinearLayout8" />
-
-    <Button
-        android:id="@+id/btnBack"
+        android:id="@+id/btnUpdate"
         android:layout_width="147dp"
         android:layout_height="46dp"
         android:text="UPDATE"
@@ -394,7 +340,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

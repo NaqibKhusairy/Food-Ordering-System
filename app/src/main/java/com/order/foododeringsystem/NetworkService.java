@@ -22,6 +22,10 @@ public interface NetworkService {
     Call<CartResponseModel> cart(@FieldMap HashMap<String, String> params);
 
     @FormUrlEncoded
-    @POST("profil.php")
-    Call<ProfilResponseModel> profil(@Field("name") String name);
+    @POST("editUserProfil.php")
+    Call<editUserProfilResponseModel> editUserProfil(@FieldMap HashMap<String, String> params);
+
+    @FormUrlEncoded
+    @POST("deleteUserProfil.php")
+    Call<DeleteUserResponseModel> deleteUser(@FieldMap HashMap<String, String> params);
 }
