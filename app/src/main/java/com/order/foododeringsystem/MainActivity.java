@@ -51,9 +51,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter your username and password", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    //letak codding database
-                    login();
-
+                    if(name.equals("admin")&&password.equals("admin")){
+                        Intent intent = new Intent(getApplicationContext(),Admin_page2.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        //letak codding database
+                        login();
+                    }
                 }
             }
         });

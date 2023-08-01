@@ -153,6 +153,9 @@ public class Home extends AppCompatActivity {
                     adminLoginIntent.putExtra("name", name);
                     startActivity(adminLoginIntent);
                     return true;
+                case R.id.item2:
+                    Intent intent = new Intent(getApplicationContext(),Admin_page.class);
+                    startActivity(intent);
                 default:
                     return super.onOptionsItemSelected(item);
             }

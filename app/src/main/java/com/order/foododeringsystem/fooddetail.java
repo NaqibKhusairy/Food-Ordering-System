@@ -27,29 +27,29 @@ public class fooddetail extends AppCompatActivity {
 
         if(foodname.equals("KARIPAP")){
             Listfood="KARIPAP DAGING RM 3.00 PER PACKET\n" +
-                    "KARIPAP AYAM RM 3.00 PER PACKET" +
-                    "\nKARIPAP KELEDEK RM 3.00 PER PACKET\n" +
-                    "KARIPAP SARDIIN RM 3.00 PER PACKET";
+                    "KARIPAP AYAM RM 2.50 PER PACKET" +
+                    "\nKARIPAP KELEDEK RM 2.00 PER PACKET\n" +
+                    "KARIPAP SARDIIN RM 2.00 PER PACKET";
         }
         else if(foodname.equals("DONUT")){
-            Listfood="DONUT BIASA  RM 3.00 PER PACKET" +
-                    "\nDONUT RED VELVET  RM 3.50 PER PACKET";
+            Listfood="DONUT BIASA  RM 2.00 PER PACKET" +
+                    "\nDONUT RED VELVET  RM 2.00 PER PACKET";
         }
         else if(foodname.equals("POPIA")){
-            Listfood="POPIA DAGING RM 4.00 PER PACKET\n"+
-                    "POPIA AYAM RM 4.00 PER PACKET\n" +
-                    "POPIA KELEDEK RM 4.00 PER PACKET";
+            Listfood="POPIA DAGING RM 3.00 PER PACKET\n"+
+                    "POPIA AYAM RM 2.50 PER PACKET\n" +
+                    "POPIA KELEDEK RM 2.00 PER PACKET";
         }
         else if(foodname.equals("SAMOSA")){
             Listfood="SAMOSA DAGING RM 3.00 PER PACKET\n"+
-                    "SAMOSA AYAM RM 3.00 PER PACKET\n" +
-                    "SAMOSA KELEDEK RM 3.00 PER PACKET";
+                    "SAMOSA AYAM RM 2.50 PER PACKET\n" +
+                    "SAMOSA KELEDEK RM 2.00 PER PACKET";
         }
         else if(foodname.equals("CUCUR BADAK")){
-            Listfood="CUCUR BADAK RM 3.50 PER PACKET";
+            Listfood="CUCUR BADAK RM 3.00 PER PACKET";
         }
         else if(foodname.equals("KUIH KASTURI")){
-            Listfood="KUIH KASTURI RM 4.00 PER PACKET";
+            Listfood="KUIH KASTURI RM 3.00 PER PACKET";
         }
         listfood.setText(Listfood);
 

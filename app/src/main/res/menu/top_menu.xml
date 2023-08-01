@@ -6,4 +6,9 @@
         android:title="My Profile"
         android:orderInCategory="101"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/item2"
+        android:title="Admin"
+        android:orderInCategory="101"
+        app:showAsAction="never" />
 </menu>

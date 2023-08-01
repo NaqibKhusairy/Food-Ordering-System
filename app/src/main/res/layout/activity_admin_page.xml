@@ -21,7 +21,7 @@
       app:layout_constraintHorizontal_bias="0.498"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/admin" />
+      app:srcCompat="@drawable/gold_elegant_aesthetic_feminine_twitter_profile_picture_removebg_preview" />
 
   <EditText
       android:id="@+id/etAdminPassword"

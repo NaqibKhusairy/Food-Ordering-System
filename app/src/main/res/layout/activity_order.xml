@@ -106,7 +106,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047"
-        app:srcCompat="@drawable/whatsapp_image_2023_07_01_at_11_37_01_pm" />
+        app:srcCompat="@drawable/gold_elegant_aesthetic_feminine_twitter_profile_picture_removebg_preview" />
 
     <TextView
         android:id="@+id/textView49"

@@ -76,61 +76,61 @@ public class Receipt_Activity extends AppCompatActivity {
             BDB="";
         }
         else{
-            BDB="DONUT BIASA "+bkd+"\n";
+            BDB="DONUT BIASA "+bdb+"\n";
         }
         if(bdr.equals("0")){
             BDR="";
         }
         else{
-            BDR="DONUT RED VELVET "+bka+"\n";
+            BDR="DONUT RED VELVET "+bdr+"\n";
         }
         if(bpk.equals("0")){
             BPK="";
         }
         else{
-            BPK="POPIA KENTANG "+bkk+"\n";
+            BPK="POPIA KENTANG "+bpk+"\n";
         }
         if(bpa.equals("0")){
             BPA="";
         }
         else{
-            BPA="POPIA AYAM "+bk1+"\n";
+            BPA="POPIA AYAM "+bpa+"\n";
         }
         if(bpd.equals("0")){
             BPD="";
         }
         else{
-            BPD="POPIA DAGING "+bkd+"\n";
+            BPD="POPIA DAGING "+bpd+"\n";
         }
         if(bsk.equals("0")){
             BSK="";
         }
         else{
-            BSK="SAMOSA KENTANG "+bka+"\n";
+            BSK="SAMOSA KENTANG "+bsk+"\n";
         }
         if(bsa.equals("0")){
             BSA="";
         }
         else{
-            BSA="SAMOSA AYAM "+bkk+"\n";
+            BSA="SAMOSA AYAM "+bsa+"\n";
         }
         if(bsd.equals("0")){
             BSD="";
         }
         else{
-            BSD="SAMOSA DAGING "+bk1+"\n";
+            BSD="SAMOSA DAGING "+bsd+"\n";
         }
         if(bcb.equals("0")){
             BCB="";
         }
         else{
-            BCB="CUCUR BADAK "+bkd+"\n";
+            BCB="CUCUR BADAK "+bcb+"\n";
         }
         if(bkksturi.equals("0")){
             BKKSTURI="";
         }
         else{
-            BKKSTURI="KUIH KASTURI "+bka+"\n";
+            BKKSTURI="KUIH KASTURI "+bkksturi+"\n";
         }
 
         output=BKD+BKA+BKK+BK1+BDB+BDR+BPK+BPA+BPD+BSK+BSA+BSD+BCB+BKKSTURI;
